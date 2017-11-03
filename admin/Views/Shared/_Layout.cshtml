@@ -11,18 +11,32 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="Content/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="Content/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="Content/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Content/bower_components/Ionicons/css/ionicons.min.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="Content/bower_components/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="~/Content/bower_components/jvectormap/jquery-jvectormap.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="~/Content/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="~/Content/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/plugins/iCheck/all.css">
+    <!-- Bootstrap Color Picker -->
+    <link rel="stylesheet" href="~/Content/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="~/Content/plugins/timepicker/bootstrap-timepicker.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/bower_components/select2/dist/css/select2.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="Content/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="~/Content/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="Content/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="~/Content/dist/css/skins/_all-skins.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,7 +85,7 @@
                                             <!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                    <img src="~/Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -84,7 +98,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="Content/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <img src="~/Content/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     AdminLTE Design Team
@@ -96,7 +110,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="Content/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <img src="~/Content/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -108,7 +122,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="Content/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <img src="~/Content/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -120,7 +134,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="Content/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                    <img src="~/Content/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -261,13 +275,13 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="Content/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <img src="~/Content/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                                 <span class="hidden-xs">Minh Tuan Nguyen</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="~/Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
                                         Alexander Pierce - Web Developer
@@ -316,7 +330,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="~/Content/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>Minh Tuan Nguyen</p>
@@ -338,11 +352,11 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li>
-                        <a href="/">
+                        <a href="/Home/Index">
                             <i class="fa fa-dashboard"></i> <span>Trang chủ</span>
                         </a>
                     </li>
-                    <li class="header">FLIGHT TICKET</li>
+                    <li class="header">FLIGHT TICKET MANAGER</li>
                     <li>
                         <a href="/">
                             <i class="fa fa-user"></i> <span>Quản lý tài khoản</span>
@@ -357,10 +371,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Tất cả vé</a></li>
-                            <li><a href="Content/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Vé đang giữ chỗ</a></li>
-                            <li><a href="Content/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Vé đã xuất</a></li>
-                            <li><a href="Content/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Vé đã hủy</a></li>
+                            <li><a href="/Booking/Booking_List"><i class="fa fa-circle-o"></i> Tất cả vé</a></li>
+                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Vé đang giữ chỗ</a></li>
+                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Vé đã xuất</a></li>
+                            <li><a href="/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Vé đã hủy</a></li>
                         </ul>
                     </li>
 
@@ -373,10 +387,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/layout/top-nav.html"><i class="fa fa-signal"></i> Số lượng vé</a></li>
-                            <li><a href="Content/pages/layout/boxed.html"><i class="fa fa-line-chart"></i> Doanh số</a></li>
-                            <li><a href="Content/pages/layout/fixed.html"><i class="fa fa-commenting-o"></i> Gửi sms</a></li>
-                            <li><a href="Content/pages/layout/collapsed-sidebar.html"><i class="fa fa-phone"></i> Call center</a></li>
+                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-signal"></i> Số lượng vé</a></li>
+                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-line-chart"></i> Doanh số</a></li>
+                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-commenting-o"></i> Gửi sms</a></li>
+                            <li><a href="/pages/layout/collapsed-sidebar.html"><i class="fa fa-phone"></i> Call center</a></li>
                         </ul>
                     </li>
 
@@ -389,9 +403,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/layout/top-nav.html"><i class="fa fa-history"></i> Báo cáo hoàn tiền</a></li>
-                            <li><a href="Content/pages/layout/boxed.html"><i class="fa fa-history"></i> Lịch sử thanh toán</a></li>
-                            <li><a href="Content/pages/layout/fixed.html"><i class="fa fa-history"></i> Lịch sử thu chi</a></li>
+                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-history"></i> Báo cáo hoàn tiền</a></li>
+                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-history"></i> Lịch sử thanh toán</a></li>
+                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-history"></i> Lịch sử thu chi</a></li>
                         </ul>
                     </li>
                     <li>
@@ -408,9 +422,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/layout/top-nav.html"><i class="fa fa-bars"></i> Thông số</a></li>
-                            <li><a href="Content/pages/layout/boxed.html"><i class="fa fa-street-view"></i> Phân quyền</a></li>
-                            <li><a href="Content/pages/layout/fixed.html"><i class="fa fa-credit-card"></i> Phí dịch vụ</a></li>
+                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-bars"></i> Thông số</a></li>
+                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-street-view"></i> Phân quyền</a></li>
+                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-credit-card"></i> Phí dịch vụ</a></li>
                         </ul>
                     </li>
                     <li class="header">THUÊ XE TỰ LÁI</li>
@@ -423,14 +437,14 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                            <li><a href="Content/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                            <li><a href="Content/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                            <li><a href="Content/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                            <li><a href="/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="Content/pages/widgets.html">
+                        <a href="/pages/widgets.html">
                             <i class="fa fa-th"></i> <span>Widgets</span>
                             <span class="pull-right-container">
                                 <small class="label pull-right bg-green">new</small>
@@ -446,10 +460,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                            <li><a href="Content/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                            <li><a href="Content/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                            <li><a href="Content/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+                            <li><a href="/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                            <li><a href="/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+                            <li><a href="/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+                            <li><a href="/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -461,12 +475,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                            <li><a href="Content/pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                            <li><a href="Content/pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                            <li><a href="Content/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                            <li><a href="Content/pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                            <li><a href="Content/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+                            <li><a href="/pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+                            <li><a href="/pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+                            <li><a href="/pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+                            <li><a href="/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+                            <li><a href="/pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+                            <li><a href="/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -477,9 +491,9 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                            <li><a href="Content/pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                            <li><a href="Content/pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+                            <li><a href="/pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
+                            <li><a href="/pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+                            <li><a href="/pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -490,12 +504,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                            <li><a href="Content/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                            <li><a href="/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+                            <li><a href="/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="Content/pages/calendar.html">
+                        <a href="/pages/calendar.html">
                             <i class="fa fa-calendar"></i> <span>Calendar</span>
                             <span class="pull-right-container">
                                 <small class="label pull-right bg-red">3</small>
@@ -504,7 +518,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="Content/pages/mailbox/mailbox.html">
+                        <a href="/pages/mailbox/mailbox.html">
                             <i class="fa fa-envelope"></i> <span>Mailbox</span>
                             <span class="pull-right-container">
                                 <small class="label pull-right bg-yellow">12</small>
@@ -521,15 +535,15 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Content/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                            <li><a href="Content/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                            <li><a href="Content/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                            <li><a href="Content/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                            <li><a href="Content/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                            <li><a href="Content/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                            <li><a href="Content/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                            <li><a href="Content/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                            <li><a href="Content/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+                            <li><a href="/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+                            <li><a href="/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                            <li><a href="/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+                            <li><a href="/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+                            <li><a href="/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+                            <li><a href="/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+                            <li><a href="/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+                            <li><a href="/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+                            <li><a href="/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -786,25 +800,26 @@
     </div>
     <!-- ./wrapper -->
     <!-- jQuery 3 -->
-    <script src="Content/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/Content/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
-    <script src="Content/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="Content/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="~/Content/bower_components/fastclick/lib/fastclick.js"></script>
     <!-- AdminLTE App -->
-    <script src="Content/dist/js/adminlte.min.js"></script>
+    <script src="~/Content/dist/js/adminlte.min.js"></script>
     <!-- Sparkline -->
-    <script src="Content/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="~/Content/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- jvectormap  -->
-    <script src="Content/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="Content/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/Content/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/Content/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
     <!-- SlimScroll -->
-    <script src="Content/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <!-- ChartJS -->
-    <script src="Content/bower_components/Chart.js/Chart.js"></script>
+    <script src="~/Content/bower_components/Chart.js/Chart.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="Content/dist/js/pages/dashboard2.js"></script>
+    <script src="~/Content/dist/js/pages/dashboard2.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="Content/dist/js/demo.js"></script>
+    <script src="~/Content/dist/js/demo.js"></script>
+    @RenderSection("script", required: false)
 </body>
 </html>
