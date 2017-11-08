@@ -4,12 +4,12 @@
 }
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
-        Booking
+    <h1 class="fa fa-plane">
+        Quản lý vé
         @*<small>advanced tables</small>*@
     </h1>
     <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Trang chủ</a></li>
         <li><a href="#">Quản lý vé</a></li>
     </ol>
 </section>
@@ -30,68 +30,96 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Minimal</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Alabama</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
+                        <label>Chuỗi tìm kiếm</label>
+                        <input type="text" class="form-control" id="" placeholder="Nhập chuỗi tìm kiếm...">
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
-                        <label>Disabled</label>
-                        <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                            <option selected="selected">Alabama</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
-                    </div>
-                    <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Multiple</label>
-                        <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
-                                style="width: 100%;">
-                            <option>Alabama</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label>Disabled Result</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Alabama</option>
-                            <option>Alaska</option>
-                            <option disabled="disabled">California (disabled)</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Trạng thái vé</label>
+                                <select class="form-control">
+                                    <option>Tất cả</option>
+                                    <option>Đang giữ chỗ</option>
+                                    <option>Đã xuất vé</option>
+                                    <option>Đã hoàn vé</option>
+                                    <option>Thay đổi hành trình</option>
+                                    <option>Chuyến bay hoàn tất</option>
+                                    <option>Vé sắp bay</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Tình trạng thanh toán</label>
+                                <select class="form-control">
+                                    <option>Tất cả</option>
+                                    <option>Chưa thanh toán</option>
+                                    <option>Đã thanh toán</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.form-group -->
                 </div>
                 <!-- /.col -->
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Đặt chỗ từ ngày:</label>
+
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label>Đặt chỗ đến ngày:</label>
+
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <!-- /.form-group -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Ngày bay:</label>
+
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="datepicker">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label>Người xuất vé</label>
+                        <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">Tất cả</option>
+                            <option>Alaska</option>
+                            <option>California</option>
+                            <option>Delaware</option>
+                            <option>Tennessee</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+                        </select>
+                    </div>
+                    <!-- /.form-group -->                     
+                </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Minimal</label>
+                        <label>Người đặt chỗ</label>
                         <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Alabama</option>
+                            <option selected="selected">Tất cả</option>
                             <option>Alaska</option>
                             <option>California</option>
                             <option>Delaware</option>
@@ -102,16 +130,18 @@
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
-                        <label>Disabled</label>
-                        <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                            <option selected="selected">Alabama</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
+                        <label>Thao tác</label>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-block btn-primary">Tìm kiếm</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-block btn-success">Tạo vé</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-block btn-default">Trở về</button>
+                            </div>
+                        </div>
                     </div>
                     <!-- /.form-group -->
                 </div>
@@ -130,20 +160,25 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <table id="example1" class="table table-bordered table-hover">
+                    <table id="booking_table" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th class="col-md-1">Mã ĐH</th>
-                                <th class="col-md-1">Mã code</th>
+                                <th>Mã ĐH</th>
+                                <th>Mã code</th>
                                 <th>Số lượng</th>
                                 <th>Giá gốc</th>
                                 <th>Giá bán</th>
-                                
+                                <th>Hành trình</th>
+                                <th>Thông tin liên hệ</th>
+                                <th>Booker</th>
+                                <th>Trạng thái</th>
+                                <th>Tình trạng</th>
+                                <th>Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#">12345</a></td>
+                                <td><a href="/Booking/Booking_Detail">12345</a></td>
                                 <td>
                                     Internet
                                     Explorer 4.0
@@ -151,6 +186,16 @@
                                 <td>Win 95+</td>
                                 <td> 4</td>
                                 <td>X</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Trident</td>
@@ -161,6 +206,16 @@
                                 <td>Win 95+</td>
                                 <td>5</td>
                                 <td>C</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Trident</td>
@@ -171,6 +226,16 @@
                                 <td>Win 95+</td>
                                 <td>5.5</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Trident</td>
@@ -181,6 +246,16 @@
                                 <td>Win 98+</td>
                                 <td>6</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Trident</td>
@@ -188,6 +263,16 @@
                                 <td>Win XP SP2+</td>
                                 <td>7</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Trident</td>
@@ -195,6 +280,16 @@
                                 <td>Win XP</td>
                                 <td>6</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -202,6 +297,16 @@
                                 <td>Win 98+ / OSX.2+</td>
                                 <td>1.7</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -209,6 +314,16 @@
                                 <td>Win 98+ / OSX.2+</td>
                                 <td>1.8</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -216,6 +331,16 @@
                                 <td>Win 98+ / OSX.2+</td>
                                 <td>1.8</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -223,6 +348,16 @@
                                 <td>Win 2k+ / OSX.3+</td>
                                 <td>1.9</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -230,6 +365,16 @@
                                 <td>OSX.2+</td>
                                 <td>1.8</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -237,6 +382,16 @@
                                 <td>OSX.3+</td>
                                 <td>1.8</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -244,6 +399,16 @@
                                 <td>Win 95+ / Mac OS 8.6-9.2</td>
                                 <td>1.7</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -251,6 +416,16 @@
                                 <td>Win 98SE+</td>
                                 <td>1.7</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Gecko</td>
@@ -258,8 +433,18 @@
                                 <td>Win 98+ / OSX.2+</td>
                                 <td>1.8</td>
                                 <td>A</td>
+                                <td>rt</td>
+                                <td>sgn</td>
+                                <td>han</td>
+                                <td>alonha</td>
+                                <td>chua tt</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-right">
+                                        <i class="fa fa-phone"></i>
+                                    </button>
+                                </td>
                             </tr>
-                            <tr>
+                            @*<tr>
                                 <td>Gecko</td>
                                 <td>Mozilla 1.0</td>
                                 <td>Win 95+ / OSX.1+</td>
@@ -552,465 +737,27 @@
                                 <td>-</td>
                                 <td>-</td>
                                 <td>U</td>
-                            </tr>
+                            </tr>*@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Mã ĐH</th>
+                                <th>Mã code</th>
+                                <th>Số lượng</th>
+                                <th>Giá gốc</th>
+                                <th>Giá bán</th>
+                                <th>Hành trình</th>
+                                <th>Thông tin liên hệ</th>
+                                <th>Booker</th>
+                                <th>Trạng thái</th>
+                                <th>Tình trạng</th>
+                                <th>Thao tác</th>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
                 <!-- /.box-body -->
             </div>
-            <!-- /.box -->
-            @*<div class="box">
-                <div class="box-header">
-                    <h3 class="box-title">Data Table With Full Features</h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Trident</td>
-                                <td>
-                                    Internet
-                                    Explorer 4.0
-                                </td>
-                                <td>Win 95+</td>
-                                <td> 4</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>
-                                    Internet
-                                    Explorer 5.0
-                                </td>
-                                <td>Win 95+</td>
-                                <td>5</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>
-                                    Internet
-                                    Explorer 5.5
-                                </td>
-                                <td>Win 95+</td>
-                                <td>5.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>
-                                    Internet
-                                    Explorer 6
-                                </td>
-                                <td>Win 98+</td>
-                                <td>6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>Internet Explorer 7</td>
-                                <td>Win XP SP2+</td>
-                                <td>7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Trident</td>
-                                <td>AOL browser (AOL desktop)</td>
-                                <td>Win XP</td>
-                                <td>6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 1.0</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 1.5</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 2.0</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Firefox 3.0</td>
-                                <td>Win 2k+ / OSX.3+</td>
-                                <td>1.9</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Camino 1.0</td>
-                                <td>OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Camino 1.5</td>
-                                <td>OSX.3+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape 7.2</td>
-                                <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape Browser 8</td>
-                                <td>Win 98SE+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Netscape Navigator 9</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.0</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.1</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.2</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.2</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.3</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.4</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.4</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.5</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.6</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>1.6</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.7</td>
-                                <td>Win 98+ / OSX.1+</td>
-                                <td>1.7</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Mozilla 1.8</td>
-                                <td>Win 98+ / OSX.1+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Seamonkey 1.1</td>
-                                <td>Win 98+ / OSX.2+</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Gecko</td>
-                                <td>Epiphany 2.20</td>
-                                <td>Gnome</td>
-                                <td>1.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 1.2</td>
-                                <td>OSX.3</td>
-                                <td>125.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 1.3</td>
-                                <td>OSX.3</td>
-                                <td>312.8</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 2.0</td>
-                                <td>OSX.4+</td>
-                                <td>419.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>Safari 3.0</td>
-                                <td>OSX.4+</td>
-                                <td>522.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>OmniWeb 5.5</td>
-                                <td>OSX.4+</td>
-                                <td>420</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>iPod Touch / iPhone</td>
-                                <td>iPod</td>
-                                <td>420.1</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Webkit</td>
-                                <td>S60</td>
-                                <td>S60</td>
-                                <td>413</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 7.0</td>
-                                <td>Win 95+ / OSX.1+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 7.5</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 8.0</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 8.5</td>
-                                <td>Win 95+ / OSX.2+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.0</td>
-                                <td>Win 95+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.2</td>
-                                <td>Win 88+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera 9.5</td>
-                                <td>Win 88+ / OSX.3+</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Opera for Wii</td>
-                                <td>Wii</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Nokia N800</td>
-                                <td>N800</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Presto</td>
-                                <td>Nintendo DS browser</td>
-                                <td>Nintendo DS</td>
-                                <td>8.5</td>
-                                <td>C/A<sup>1</sup></td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.1</td>
-                                <td>KDE 3.1</td>
-                                <td>3.1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.3</td>
-                                <td>KDE 3.3</td>
-                                <td>3.3</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>KHTML</td>
-                                <td>Konqureror 3.5</td>
-                                <td>KDE 3.5</td>
-                                <td>3.5</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 4.5</td>
-                                <td>Mac OS 8-9</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 5.1</td>
-                                <td>Mac OS 7.6-9</td>
-                                <td>1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Tasman</td>
-                                <td>Internet Explorer 5.2</td>
-                                <td>Mac OS 8-X</td>
-                                <td>1</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>NetFront 3.1</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>NetFront 3.4</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Dillo 0.8</td>
-                                <td>Embedded devices</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Links</td>
-                                <td>Text only</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>Lynx</td>
-                                <td>Text only</td>
-                                <td>-</td>
-                                <td>X</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>IE Mobile</td>
-                                <td>Windows Mobile 6</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Misc</td>
-                                <td>PSP browser</td>
-                                <td>PSP</td>
-                                <td>-</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>U</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->*@
         </div>
         <!-- /.col -->
     </div>
@@ -1024,7 +771,7 @@
     <!-- Select2 -->
 <script src="~/Content/bower_components/select2/dist/js/select2.full.min.js"></script>
 <!-- InputMask -->
-<script src="~/Content/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="~/Content/plugins/input-mask/jquery.inputmask.js"></script> 
 <script src="~/Content/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
 <script src="~/Content/plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- date-range-picker -->
@@ -1042,13 +789,25 @@
 <script>
     $(function () {
         $('#example1').DataTable()
-        $('#example2').DataTable({
+        $('#booking_table').DataTable({
             'paging': true,
             'lengthChange': false,
             'searching': false,
             'ordering': true,
             'info': true,
-            'autoWidth': false
+            'autoWidth': false,
+            "aoColumns": [
+            { sWidth: '5%' },
+            { sWidth: '9%' },
+            { sWidth: '5%' },
+            { sWidth: '7%' },
+            { sWidth: '7%' },
+            { sWidth: '20%' },
+            { sWidth: '12%' },
+            { sWidth: '7%' },
+            { sWidth: '9%' },
+            { sWidth: '9%' },
+            { sWidth: '10%' }]
         })
     })
 </script>
