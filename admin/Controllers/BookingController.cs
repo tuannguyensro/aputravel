@@ -18,5 +18,9 @@ namespace admin.Controllers
         {
             return View();
         }
+        public ActionResult Booking_Add()
+        {
+            return View();
+        }
 	}
 }

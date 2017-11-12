@@ -40,10 +40,10 @@
                             <button type="button" class="btn btn-success pull-right" style="margin-right: 5px;">
                                 <i class="fa fa-plus"></i> Tạo mới
                             </button>
-                            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-primary2" style="margin-right: 5px;">
                                 <i class="fa fa-edit"></i> Cập nhật
                             </button>
-                            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-primary1" style="margin-right: 5px;">
                                 <i class="fa fa-send"></i> Gửi vé
                             </button>
                             <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
@@ -52,6 +52,76 @@
                         </div>
                 </div>
                 <!-- /.col -->
+
+                <div class="modal modal-primary fade" id="modal-primary1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">Gửi thông tin vé</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nhập email người nhận:</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" id="mail">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-outline">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <div class="modal modal-primary fade" id="modal-primary2">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">Cập nhật thông tin vé</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nhập email người nhận:</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <input type="text" class="form-control pull-right" id="mail">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-outline" data-dismiss="modal">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
             </div>
             <!-- /.row -->
             <h2 class="page-header">
@@ -93,13 +163,13 @@
             <b>Order ID:</b> 4F3S8J<br>
             <b>Payment Due:</b> 2/22/2014<br>
             <b>Account:</b> 968-34567*@
-            <p class="lead">Thông tin chi tiết</p>
+            <p class="lead">THÔNG TIN BOOKING</p>
 
             <div class="table-responsive">
-                <table class="table" style="font-size: large;">
+                <table class="table" style="font-size: medium;">
                     <tr>
                         <th style="width:50%">Mã đặt chỗ:</th>
-                        <td style="color:#ff0000;"> 51369854</td>
+                        <td style="color:#ff0000; font-size: x-large"> 51369854</td>
                     </tr>
                     <tr>
                         <th>Trạng thái:</th>
@@ -127,6 +197,18 @@
                     </tr>
                     <tr>
                         <th>Giá gốc:</th>
+                        <td class="fa fa-money"> 460,000</td>
+                    </tr>
+                    <tr>
+                        <th>Giá bán:</th>
+                        <td class="fa fa-money"> 520,000</td>
+                    </tr>
+                    <tr>
+                        <th>Giảm giá:</th>
+                        <td class="fa fa-money"> 60,000</td>
+                    </tr>
+                    <tr style="background-color:#000; color:#ffffff;">
+                        <th>Tổng tiền:</th>
                         <td class="fa fa-money"> 460,000</td>
                     </tr>
                 </table>

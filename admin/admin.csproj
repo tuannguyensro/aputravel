@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AnalyticsController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -7507,6 +7508,8 @@
     <Content Include="Views\Booking\Booking_List.cshtml" />
     <Content Include="Views\Account\Account_List.cshtml" />
     <Content Include="Views\Booking\Booking_Detail.cshtml" />
+    <Content Include="Views\Analytics\Revenue.cshtml" />
+    <Content Include="Views\Booking\Booking_Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

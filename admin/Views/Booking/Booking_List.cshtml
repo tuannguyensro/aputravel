@@ -28,124 +28,128 @@
         <!-- /.box-header -->
         <div class="box-body">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Chuỗi tìm kiếm</label>
-                        <input type="text" class="form-control" id="" placeholder="Nhập chuỗi tìm kiếm...">
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Trạng thái vé</label>
-                                <select class="form-control">
-                                    <option>Tất cả</option>
-                                    <option>Đang giữ chỗ</option>
-                                    <option>Đã xuất vé</option>
-                                    <option>Đã hoàn vé</option>
-                                    <option>Thay đổi hành trình</option>
-                                    <option>Chuyến bay hoàn tất</option>
-                                    <option>Vé sắp bay</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Tình trạng thanh toán</label>
-                                <select class="form-control">
-                                    <option>Tất cả</option>
-                                    <option>Chưa thanh toán</option>
-                                    <option>Đã thanh toán</option>
-                                </select>
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Chuỗi tìm kiếm</label>
+                            <input type="text" class="form-control" id="" placeholder="Nhập chuỗi tìm kiếm...">
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Trạng thái vé</label>
+                                    <select class="form-control">
+                                        <option>Tất cả</option>
+                                        <option>Đang giữ chỗ</option>
+                                        <option>Đã xuất vé</option>
+                                        <option>Đã hoàn vé</option>
+                                        <option>Thay đổi hành trình</option>
+                                        <option>Chuyến bay hoàn tất</option>
+                                        <option>Vé sắp bay</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Tình trạng thanh toán</label>
+                                    <select class="form-control">
+                                        <option>Tất cả</option>
+                                        <option>Chưa thanh toán</option>
+                                        <option>Đã thanh toán</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+                        <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label>Đặt chỗ từ ngày:</label>
+                    <!-- /.col -->
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Đặt chỗ từ ngày:</label>
 
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker">
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker">
+                            <!-- /.input group -->
                         </div>
-                        <!-- /.input group -->
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label>Đặt chỗ đến ngày:</label>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label>Đặt chỗ đến ngày:</label>
 
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker">
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker">
+                            <!-- /.input group -->
                         </div>
-                        <!-- /.input group -->
+                        <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label>Ngày bay:</label>
+                    <!-- /.col -->
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Ngày bay:</label>
 
-                        <div class="input-group date">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker">
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker">
+                            <!-- /.input group -->
                         </div>
-                        <!-- /.input group -->
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label>Người xuất vé</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Tất cả</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label>Người xuất vé</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Tất cả</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
-                    </div>
-                    <!-- /.form-group -->                     
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Người đặt chỗ</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Tất cả</option>
-                            <option>Alaska</option>
-                            <option>California</option>
-                            <option>Delaware</option>
-                            <option>Tennessee</option>
-                            <option>Texas</option>
-                            <option>Washington</option>
-                        </select>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group">
-                        <label>Thao tác</label>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-block btn-primary">Tìm kiếm</button>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-block btn-success">Tạo vé</button>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-block btn-default">Trở về</button>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Người đặt chỗ</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Tất cả</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Washington</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label>Thao tác</label>
+                            <div class="row" style="margin-left:0px;">
+                                <button type="button" class="btn btn-primary pull-left">
+                                    <i class="fa fa-search"></i> Tìm kiếm
+                                </button>
+                                <a href="/Booking/Booking_Add">
+                                    <button type="button" class="btn btn-success pull-left" style="margin-left: 5px;">
+                                        <i class="fa fa-plus"></i>Tạo vé
+                                    </button>
+                                </a>
+                                <button type="button" class="btn btn-default pull-left" style="margin-left: 5px;">
+                                    <i class="fa fa-history"></i> Trở về
+                                </button>
                             </div>
                         </div>
+                        <!-- /.form-group -->
                     </div>
-                    <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
+                    <!-- /.col -->
+                </div>              
             </div>
             <!-- /.row -->
         </div>
@@ -178,7 +182,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="/Booking/Booking_Detail">12345</a></td>
+                                <td><a href="/Booking/Booking_Detail" target="_blank">12345</a></td>
                                 <td>
                                     Internet
                                     Explorer 4.0
@@ -187,10 +191,17 @@
                                 <td> 4</td>
                                 <td>X</td>
                                 <td>rt</td>
-                                <td>sgn</td>
-                                <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td>
+                                    MR TUAN NGUYEN<br>
+                                    01258585874<br>
+                                    tuannguyensro@gmail.com
+                                </td>
+                                <td>
+                                    A01.APUTRAVEL<br />
+                                    11NOV17 11:11
+                                </td>
+                                <td><span class="label label-primary">BOOKED</span></td>
+                                <td><span class="label label-danger">Chưa TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -209,8 +220,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-primary">BOOKED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -229,8 +240,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMFIRMED</span></td>
+                                <td><span class="label label-danger">Chưa TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -249,8 +260,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-warning">TIMEOUT</span></td>
+                                <td><span class="label label-danger">Chưa TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -266,8 +277,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-primary">BOOKED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -283,8 +294,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">WILLFLY</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -300,8 +311,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">WILLFLY</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -317,8 +328,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">WILLFLY</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -334,8 +345,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -351,8 +362,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -368,8 +379,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-danger">ERROR</span></td>
+                                <td><span class="label label-danger">Chưa TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -385,8 +396,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -402,8 +413,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -419,8 +430,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -436,8 +447,8 @@
                                 <td>rt</td>
                                 <td>sgn</td>
                                 <td>han</td>
-                                <td>alonha</td>
-                                <td>chua tt</td>
+                                <td><span class="label label-success">COMPLETED</span></td>
+                                <td><span class="label label-success">Đã TT</span></td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-right">
                                         <i class="fa fa-phone"></i>
@@ -796,6 +807,7 @@
             'ordering': true,
             'info': true,
             'autoWidth': false,
+            'scrollX' : true,
             "aoColumns": [
             { sWidth: '5%' },
             { sWidth: '9%' },

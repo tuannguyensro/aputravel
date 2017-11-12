@@ -28,54 +28,213 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Chuỗi tìm kiếm</label>
-                        <input type="text" class="form-control" id="" placeholder="Nhập chuỗi tìm kiếm...">
-                    </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Loại tài khoản</label>
-                        <select class="form-control">
-                            <option>Tất cả</option>
-                            <option>Administrator</option>
-                            <option>Booker</option>
-                            <option>User</option>
-                            <option>CTV</option>
-                            <option>Đại lý</option>
-                            <option>Company</option>
-                        </select>
-                    </div>
-                    <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label>Thao tác</label>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-block btn-primary">Tìm kiếm</button>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="button" class="btn btn-block btn-success">Tạo tài khoản</button>
-                            </div>
-                            <div class="col-md-4" >
-                                <button type="button"class="btn btn-block btn-default">Trở về</button>
-                            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Chuỗi tìm kiếm</label>
+                            <input type="text" class="form-control" id="" placeholder="Nhập chuỗi tìm kiếm...">
                         </div>
                     </div>
-                    <!-- /.form-group -->
+                    <!-- /.col -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Loại tài khoản</label>
+                            <select class="form-control">
+                                <option>Tất cả</option>
+                                <option>Administrator</option>
+                                <option>Booker</option>
+                                <option>User</option>
+                                <option>CTV</option>
+                                <option>Đại lý</option>
+                                <option>Company</option>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Thao tác</label>
+                            <div class="row" style="margin-left:0px;">
+                                <button type="button" class="btn btn-primary pull-left">
+                                    <i class="fa fa-search"></i> Tìm kiếm
+                                </button>
+                                <button type="button" class="btn btn-success pull-left" data-toggle="modal" data-target="#Add_Account" style="margin-left: 5px;">
+                                    <i class="fa fa-plus"></i> Tạo tài khoản
+                                </button>
+                                <button type="button" class="btn btn-default pull-left" style="margin-left: 5px;">
+                                    <i class="fa fa-history"></i> Trở về
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
                 </div>
-                <!-- /.col -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
         </div>
         <!-- /.box-body -->
     </div>
     <!-- /.box -->
+
+
+    <div class="modal modal-primary fade" id="Add_Account">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Tạo tài khoản</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Tên đăng nhập:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Mật khẩu:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Họ và tên:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-group"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Giới tính:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-male"></i>
+                                    </div>
+                                    <select class="form-control pull-right">
+                                        <option>Nam</option>
+                                        <option>Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Ngày sinh:</label>
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="datepicker">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Địa chỉ:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Điện thoại:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Mail:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nhóm tài khoản:</label>
+                                <select class="form-control">
+                                    <option>Administrator</option>
+                                    <option>Booker</option>
+                                    <option>User</option>
+                                    <option>CTV</option>
+                                    <option>Đại lý</option>
+                                    <option>Company</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Quản lý bởi:</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Admin</option>
+                                    <option>Alaska</option>
+                                    <option>California</option>
+                                    <option>Delaware</option>
+                                    <option>Tennessee</option>
+                                    <option>Texas</option>
+                                    <option>Washington</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Hình ảnh</label>
+                        <input type="file" id="exampleInputFile">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline"><i class="fa fa-save"></i> Lưu</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -110,7 +269,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">002</a></td>
@@ -122,7 +285,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">003</a></td>
@@ -134,7 +301,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">004</a></td>
@@ -146,7 +317,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">005</a></td>
@@ -158,7 +333,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">006</a></td>
@@ -170,7 +349,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">007</a></td>
@@ -182,7 +365,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">008/a></td>
@@ -194,7 +381,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">009</a></td>
@@ -206,7 +397,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">010</a></td>
@@ -218,7 +413,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">011</a></td>
@@ -230,7 +429,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">012</a></td>
@@ -242,7 +445,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">013</a></td>
@@ -254,7 +461,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">014</a></td>
@@ -266,7 +477,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td><a href="#">015</a></td>
@@ -278,7 +493,11 @@
                                 <td>admin</td>
                                 <td>22/11/2017</td>
                                 <td>Đã kích hoạt</td>
-                                <td>sửa</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary pull-left">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                         <tfoot>
