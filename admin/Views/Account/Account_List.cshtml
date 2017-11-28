@@ -2,7 +2,12 @@
     ViewBag.Title = "Account_List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Angularjs {  
+<script src="~/AngularScript/app.js"></script>
+<script src="~/AngularScript/Account/AccountService.js"></script>
+<script src="~/AngularScript/Account/AccountController.js"></script>
 
+    }
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1 class="fa fa-user">
@@ -60,7 +65,7 @@
                                 <button type="button" class="btn btn-primary pull-left">
                                     <i class="fa fa-search"></i> Tìm kiếm
                                 </button>
-                                <button type="button" class="btn btn-success pull-left" data-toggle="modal" data-target="#Add_Account" style="margin-left: 5px;">
+                                <button type="button" class="btn btn-success pull-left" data-toggle="modal" data-target="#Add_Account" style="margin-left: 5px;" ng-click="AddAccountDiv()">
                                     <i class="fa fa-plus"></i> Tạo tài khoản
                                 </button>
                                 <button type="button" class="btn btn-default pull-left" style="margin-left: 5px;">
@@ -87,10 +92,11 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">Tạo tài khoản</h4>
+                    <h4 class="modal-title">{{Action}} tài khoản</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
+                        <div class="row hidden" ng-model="AccountId"></div>
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Tên đăng nhập:</label>
@@ -98,7 +104,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-user"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="inputEmail" ng-model="Username">
                                 </div>
                                 <!-- /.input group -->
                             </div>
@@ -106,9 +112,9 @@
                                 <label>Mật khẩu:</label>
                                 <div class="input-group">
                                     <div class="input-group-addon">
-                                        <i class="fa fa-bell"></i>
+                                        <i class="fa fa-lock"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Password">
                                 </div>
                                 <!-- /.input group -->
                             </div>
@@ -124,7 +130,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-group"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Fullname">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -133,9 +139,9 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-male"></i>
                                     </div>
-                                    <select class="form-control pull-right">
-                                        <option>Nam</option>
-                                        <option>Nữ</option>
+                                    <select class="form-control pull-right" id="sex">
+                                        <option value="0">Nam</option>
+                                        <option value="1">Nữ</option>
                                     </select>
                                 </div>
                             </div>
@@ -151,7 +157,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="datepicker">
+                                    <input type="text" class="form-control pull-right" id="datepicker" ng-model="DateOfBirth">
                                 </div>
                                 <!-- /.input group -->
                             </div>
@@ -161,7 +167,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-home"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Address">
                                 </div>
                             </div>
                         </div>
@@ -176,7 +182,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-phone"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Phone">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -185,7 +191,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-envelope"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail">
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Mail">
                                 </div>
                             </div>
                         </div>
@@ -195,25 +201,25 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Nhóm tài khoản:</label>
-                                <select class="form-control">
-                                    <option>Administrator</option>
-                                    <option>Booker</option>
-                                    <option>User</option>
-                                    <option>CTV</option>
-                                    <option>Đại lý</option>
-                                    <option>Company</option>
+                                <select class="form-control" ng-model="AccountGroupID">
+                                    <option value="0">Administrator</option>
+                                    <option value="1">Booker</option>
+                                    <option value="2">User</option>
+                                    <option value="3">CTV</option>
+                                    <option value="4">Đại lý</option>
+                                    <option value="5">Company</option>
                                 </select>
                             </div>
                             <div class="col-md-6">
                                 <label>Quản lý bởi:</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Admin</option>
-                                    <option>Alaska</option>
-                                    <option>California</option>
-                                    <option>Delaware</option>
-                                    <option>Tennessee</option>
-                                    <option>Texas</option>
-                                    <option>Washington</option>
+                                <select class="form-control select2" ng-model="ManagedBy" style="width: 100%;">
+                                    <option selected="selected" value="0">Admin</option>
+                                    <option value="1">Alaska</option>
+                                    <option value="2">California</option>
+                                    <option value="3">Delaware</option>
+                                    <option value="4">Tennessee</option>
+                                    <option value="5">Texas</option>
+                                    <option value="6">Washington</option>
                                 </select>
                             </div>
                         </div>
@@ -221,13 +227,170 @@
 
                     <div class="form-group">
                         <label for="exampleInputFile">Hình ảnh</label>
-                        <input type="file" id="exampleInputFile">
+                        <input type="file" id="exampleInputFile" ng-model="Image">
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-outline"><i class="fa fa-save"></i> Lưu</button>
+                    <button type="button" class="btn btn-outline" value="Submit" id="Save_Account" data-dismiss="modal" ng-click="AddUpdateAccount()"><i class="fa fa-save"></i> Lưu</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal modal-primary fade" id="Update_Account">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Cập nhật tài khoản</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Tên đăng nhập:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="Username" ng-model="Username">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Mật khẩu:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="Password" ng-model="Password">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Họ và tên:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-group"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Fullname">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Giới tính:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-male"></i>
+                                    </div>
+                                    <input type="text" ng-model="Sex" />
+                                    <select class="form-control pull-right" ng-model="Sex">
+                                        <option value="0">Nam</option>
+                                        <option value="1">Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Ngày sinh:</label>
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="datepicker" ng-model="DateOfBirth">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Địa chỉ:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Address">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Điện thoại:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="Phone" ng-model="Phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Mail:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Mail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nhóm tài khoản:</label>
+                                <select class="form-control" ng-model="AccountGroupID">
+                                    <option value="0">Administrator</option>
+                                    <option value="1">Booker</option>
+                                    <option value="2">User</option>
+                                    <option value="3">CTV</option>
+                                    <option value="4">Đại lý</option>
+                                    <option value="5">Company</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Quản lý bởi:</label>
+                                <select class="form-control select2" ng-model="ManagedBy" style="width: 100%;">
+                                    <option selected="selected" value="0">Admin</option>
+                                    <option value="1">Alaska</option>
+                                    <option value="2">California</option>
+                                    <option value="3">Delaware</option>
+                                    <option value="4">Tennessee</option>
+                                    <option value="5">Texas</option>
+                                    <option value="6">Washington</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputFile">Hình ảnh</label>
+                        <input type="file" id="exampleInputFile" ng-model="Image">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline" data-dismiss="modal" value="Submit" id="Add_Account" ng-click="InsertData()"><i class="fa fa-save"></i> Cập nhật</button>
                 </div>
             </div>
             <!-- /.modal-content -->
@@ -259,243 +422,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><a href="#">001</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
+                            <tr ng-repeat="account in accounts">
+                                <td><a href="#">{{account.AccountID}}</a></td>
+                                <td>{{account.Image}}</td>
+                                <td>{{account.Fullname}}</td>
+                                <td>{{account.Username}}</td>
+                                <td>{{account.Phone}}</td>
+                                <td>{{account.AccountGroupID}}</td>
+                                <td>{{account.ManagedBy}}</td>
+                                <td>{{account.CreatedDate | date :  "dd.MMM.y"}}</td>
+                                <td>{{account.Status}}</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary pull-left">
+                                    <button type="button" class="btn btn-primary pull-left btnAdd" data-toggle="modal" data-target="#Add_Account" ng-click="editAccount(account)">
                                         <i class="fa fa-edit"></i>
                                     </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">002</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">003</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">004</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">005</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">006</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">007</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">008/a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">009</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">010</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">011</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">012</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">013</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">014</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">015</a></td>
-                                <td>abc</td>
-                                <td>Ms Thanh Huong</td>
-                                <td>A01.APUTRAVEL</td>
-                                <td>01258585874</td>
-                                <td>CTV</td>
-                                <td>admin</td>
-                                <td>22/11/2017</td>
-                                <td>Đã kích hoạt</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary pull-left">
-                                        <i class="fa fa-edit"></i>
+                                    <button type="button" class="btn btn-danger pull-left" ng-click="deleteAccount(account)" style="margin-left: 5px;">
+                                        <i class="fa fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
@@ -637,4 +579,5 @@
             })
         })
     </script>
+
 }

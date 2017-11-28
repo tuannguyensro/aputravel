@@ -3,7 +3,7 @@
 }
 
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +37,9 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="~/Content/dist/css/skins/_all-skins.min.css">
-
+    <script src="~/Scripts/angular.js"></script>
+    @RenderSection("Angularjs", required: false)
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -387,8 +389,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-signal"></i> Số lượng vé</a></li>
-                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-line-chart"></i> Doanh số</a></li>
+                            <li><a href=""><i class="fa fa-signal"></i> Số lượng vé</a></li>
+                            <li><a href="/Analytics/Revenue"><i class="fa fa-line-chart"></i> Doanh số</a></li>
                             <li><a href="/pages/layout/fixed.html"><i class="fa fa-commenting-o"></i> Gửi sms</a></li>
                             <li><a href="/pages/layout/collapsed-sidebar.html"><i class="fa fa-phone"></i> Call center</a></li>
                         </ul>
@@ -427,9 +429,44 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="/pages/layout/top-nav.html"><i class="fa fa-bars"></i> Thông số</a></li>
-                            <li><a href="/pages/layout/boxed.html"><i class="fa fa-street-view"></i> Phân quyền</a></li>
-                            <li><a href="/pages/layout/fixed.html"><i class="fa fa-credit-card"></i> Phí dịch vụ</a></li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-bars"></i> Thông số
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> API</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Hệ thống</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Nhóm tài khoản</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Cá nhân</a></li>
+                                </ul>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-street-view"></i> Phân quyền
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Loại tài khoản</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Cá nhân</a></li>
+                                </ul>
+                            </li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-credit-card"></i> Phí dịch vụ
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Theo quốc gia</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Theo hãng</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="header">THUÊ XE TỰ LÁI</li>
@@ -598,8 +635,8 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-           @RenderBody()
+        <div class="content-wrapper" ng-controller="myCtrl" ng-init="GetAllData()">
+            @RenderBody()
         </div>
         <!-- /.content-wrapper -->
 
