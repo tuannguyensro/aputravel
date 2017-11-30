@@ -5,8 +5,7 @@
 @section Angularjs {  
 <script src="~/AngularScript/app.js"></script>
 <script src="~/AngularScript/Account/AccountService.js"></script>
-<script src="~/AngularScript/Account/AccountController.js"></script>
-
+<script src="~/AngularScript/Account/Controller.js"></script>
     }
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -140,8 +139,8 @@
                                         <i class="fa fa-male"></i>
                                     </div>
                                     <select class="form-control pull-right" id="sex">
-                                        <option value="0">Nam</option>
-                                        <option value="1">Nữ</option>
+                                        <option value="True">Nam</option>
+                                        <option value="False">Nữ</option>
                                     </select>
                                 </div>
                             </div>
@@ -182,7 +181,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-phone"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Phone">
+                                    <input type="text" class="form-control pull-right" id="phone" ng-model="Phone">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -191,7 +190,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-envelope"></i>
                                     </div>
-                                    <input type="text" class="form-control pull-right" id="mail" ng-model="Mail">
+                                    <input type="text" class="form-control pull-right" id="getmail" ng-model="Mail">
                                 </div>
                             </div>
                         </div>
@@ -242,7 +241,7 @@
     </div>
     <!-- /.modal -->
 
-    <div class="modal modal-primary fade" id="Update_Account">
+    @*<div class="modal modal-primary fade" id="Update_Account">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -397,7 +396,7 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
-    <!-- /.modal -->
+    <!-- /.modal -->*@
     <div class="row">
         <div class="col-xs-12">
             <div class="box">
@@ -430,8 +429,8 @@
                                 <td>{{account.Phone}}</td>
                                 <td>{{account.AccountGroupID}}</td>
                                 <td>{{account.ManagedBy}}</td>
-                                <td>{{account.CreatedDate | date :  "dd.MMM.y"}}</td>
-                                <td>{{account.Status}}</td>
+                                <td id="date">{{(account.CreatedDate).replace('/Date(','').replace(')/','') | date:'dd-MMM-yyyy'}}</td>
+                                <td id="getvalueboolean">{{account.Status!="true" ? "a" :"b"}}</td>
                                 <td>
                                     <button type="button" class="btn btn-primary pull-left btnAdd" data-toggle="modal" data-target="#Add_Account" ng-click="editAccount(account)">
                                         <i class="fa fa-edit"></i>
@@ -513,6 +512,21 @@
         })
     </script>
     <script>
+        //$(document).ready(function () {
+        //    checkStatus();
+        //})
+        //function checkStatus() {
+        //    var a = $('#getvalueboolean').text();
+        //    var htmltrue = "<a class=\"btn btn-primary btn-xs\">Đã kích hoạt</a>";
+        //    var htmlfalse = "<a class=\"btn btn-danger btn-xs\">Chưa kích hoạt</a>";
+           
+        //    if (a === "false") {
+        //        $('#getvalueboolean').html(htmlfalse)
+        //    }
+        //    if (a === "true") {
+        //        $('#getvalueboolean').html(htmltrue)
+        //    }
+        //}
         $(function () {
             //Initialize Select2 Elements
             $('.select2').select2()

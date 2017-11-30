@@ -57,7 +57,6 @@ namespace admin.Controllers
                   AccObj.Mail = Acc.Mail;
                   AccObj.AccountGroupID = Acc.AccountGroupID;
                   AccObj.ManagedBy = Acc.ManagedBy;
-                  AccObj.CreatedDate = Acc.CreatedDate;
                   dataContext.SaveChanges();
                   return "Account Updated";
               }
